@@ -249,7 +249,7 @@
           </svg>
         </button>
       </li>
-      <li id="menu">
+      <li @click.stop="isOpen = !isOpen" id="menu">
         <button class="menu">Menu</button>
         <button class="burger">
           <svg
@@ -380,19 +380,348 @@
         </button>
       </li>
     </ul>
-    <div id="toggle" class="toggle-menu">
-      <ul>
-        <li>Donate</li>
-        <li>Curriculum</li>
-        <li>Profile</li>
-        <li class="line">Settings</li>
-        <li>Forum</li>
-        <li>News</li>
-        <li>Radio</li>
-        <li class="line">Contribute</li>
-        <li class="line">Night Mode</li>
-        <li>Sign out</li>
+    <div :class="{ toggle: isOpen }" class="toggle-menu">
+      <ul @click.stop>
+        <li><a>Donate</a></li>
+        <li><a>Curriculum</a></li>
+        <li><a>Profile</a></li>
+        <li class="line"><a>Settings</a></li>
+        <li><a>Forum</a></li>
+        <li><a>News</a></li>
+        <li><a>Radio</a></li>
+        <li class="line"><a>Contribute</a></li>
+        <li class="line"><a>Night Mode</a></li>
+        <li><a>Sign out</a></li>
       </ul>
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  mounted() {
+    document.addEventListener(
+      "click",
+      () => {
+        this.isOpen = false;
+      },
+      false
+    );
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+header {
+  background-color: #0a0a23;
+  width: 100%;
+  padding: 7px 15px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
+  position: relative;
+}
+
+@media (min-width: 1441px) {
+  header {
+    height: 60px;
+  }
+}
+
+@media (max-width: 1440px) {
+  header {
+    height: 43px;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 100%;
+  width: 50%;
+}
+
+li:first-child input {
+  font-size: 1rem;
+  border: none;
+  background-color: inherit;
+  font-family: "Lato", sans-serif;
+}
+
+li:first-child form {
+  position: relative;
+  background-color: #3b3b4f;
+  padding: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  display: flex;
+}
+
+button {
+  border: none;
+  background: none;
+  margin: 0px 3%;
+}
+
+button img,
+svg {
+  width: 100%;
+  height: auto;
+}
+
+button,
+li {
+  cursor: pointer;
+}
+
+.search {
+  width: 70%;
+}
+
+@media (max-width: 920px) {
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .logo {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    width: 90%;
+  }
+}
+
+.logo svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  width: 18%;
+}
+
+@media (max-width: 920px) {
+  .logo svg {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0);
+    width: 100%;
+  }
+}
+
+::placeholder {
+  color: #ffffffcc;
+}
+
+.right-menu {
+  width: 15%;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 1rem;
+  #menu {
+    z-index: 10;
+  }
+}
+
+@media (min-width: 1400px) {
+  .right-menu {
+    gap: 0;
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-menu {
+    width: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .right-menu {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 400px) {
+  .right-menu {
+    width: 30%;
+  }
+}
+
+.right-menu li {
+  width: 25%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .right-menu li {
+    width: 30%;
+  }
+}
+
+.right-menu button {
+  color: #fff;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  padding: 0% 10%;
+}
+
+.right-menu button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.right-menu > li:first-child button:hover svg path {
+  stroke: #000;
+  fill: #fff;
+}
+
+.right-menu button img,
+.right-menu button svg {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.right-menu button path {
+  stroke: #fff;
+}
+
+.right-menu .burger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .right-menu .burger {
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    display: block;
+  }
+}
+
+.right-menu .burger svg {
+  width: 1rem;
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.right-menu li:first-child button {
+  padding: 4%;
+}
+
+.right-menu li:first-child,
+.right-menu li:last-child {
+  width: 20%;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .right-menu li:first-child,
+  .right-menu li:last-child {
+    width: 30%;
+  }
+}
+
+.right-menu li:last-child {
+  border: none;
+  height: auto;
+}
+
+.right-menu li:last-child button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.right-menu li:last-child button svg {
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
+
+.toggle-menu {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  min-height: 15rem;
+  width: 15rem;
+  background-color: #0a0a23;
+  margin-top: 43px;
+  color: #fff;
+}
+
+@media (min-width: 1441px) {
+  .toggle-menu {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .toggle-menu {
+    margin-top: 43px;
+  }
+}
+
+.toggle-menu.toggle {
+  display: block;
+}
+
+.toggle-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.toggle-menu li {
+  width: 100%;
+  padding: 10px 0;
+}
+.toggle-menu .line {
+  border-bottom: 1px solid #d0d0d5;
+}
+
+.toggle-menu li:hover {
+  background-color: #d0d0d5;
+  color: #0a0a23;
+}
+
+.toggle-menu li a {
+  padding: 15px;
+  font-size: 1.14rem;
+  color: inherit;
+}
+</style>
