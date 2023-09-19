@@ -11,6 +11,7 @@
     "@vitejs/plugin-vue": "^4.3.4",
     "core-js": "^3.6.5",
     "vue": "^3.2.26",
+    "vue-axios": "^3.5.2",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {

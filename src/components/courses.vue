@@ -6,7 +6,6 @@
       <ul v-for="item in course.description" :key="item.id">
         <li>{{ item }}</li>
       </ul>
-      <!-- /////////////////////////////// -->
       <div class="one-px-spacer"></div>
       <div @click="isOpen = !isOpen" class="course desc">
         <div class="course-test-section-title">
@@ -19,15 +18,18 @@
           </svg>
           <p>Expand course</p>
         </div>
-        <span class="result">
-          <span id="test-result"> 0 / {{ courses.length }}</span></span
-        >
+        <span class="result"> <span id="test-result"> 0 / {{}}</span></span>
       </div>
       <div class="course test">
-        <ul :class="{ open: isOpen }" class="test-list">
+        <ul
+          v-for="test in course.tests"
+          :key="test.id"
+          :class="{ open: isOpen }"
+          class="test-list"
+        >
           <li>
-            <span
-              ><svg
+            <span>
+              <svg
                 aria-hidden="true"
                 height="15"
                 viewBox="0 0 200 200"
@@ -45,379 +47,16 @@
                     stroke-dasharray="null"
                     stroke-width="10"
                   ></circle>
-                </g></svg></span
-            ><a href="testFiles/1.html">Comment Your JavaScript Code</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Declare JavaScript Variables</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Storing Values with the Assignment Operator</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Assigning the Value of One Variable to Another</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Initializing Variables with the Assignment Operator</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Declare String Variables </a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Understanding Uninitialized Variables</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Understanding Case Sensitivity in Variables</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Explore Differences Between the var and let Keywords</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Declare a Read-Only Variable with the const Keyword</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Add Two Numbers with JavaScript</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Subtract One Number from Another with JavaScript</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Multiply Two Numbers with JavaScript</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Divide One Number by Another with JavaScript</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Increment a Number with JavaScript</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Decrement a Number with JavaScript</a>
-          </li>
-          <li>
-            <span
-              ><svg
-                aria-hidden="true"
-                height="15"
-                viewBox="0 0 200 200"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Not Passed</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#fff"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                    stroke-width="10"
-                  ></circle>
-                </g></svg></span
-            ><a href="">Create Decimal Numbers with JavaScript</a>
+                </g>
+              </svg>
+            </span>
+            <router-link to="/comment-your-javascript-code"
+              >Comment your js code</router-link
+            >{{ test }}
           </li>
         </ul>
       </div>
+      <!-- /////////////////////////////// -->
     </div>
   </div>
 </template>
@@ -434,6 +73,23 @@ export default {
             `JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers.`,
             `In this course, you'll learn fundamental programming concepts in JavaScript. You'll start with basic data structures like numbers and strings. Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more.`,
           ],
+          adress: "basic-js",
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Understanding Uninitialized Variables",
+            "Understanding Case Sensitivity in Variables",
+            "Explore Differences Between the var and let Keywords",
+            "Declare a Read-Only Variable with the const Keyword",
+            "Add Two Numbers with JavaScript",
+            "Subtract One Number from Another with JavaScript",
+            "Multiply Two Numbers with JavaScript",
+            "Divide One Number by Another with JavaScript",
+          ],
         },
         {
           title: "ES6",
@@ -442,12 +98,30 @@ export default {
             `Most of the JavaScript you've learned up to this point was in ES5 (ECMAScript 5), which was finalized in 2009. While you can still write programs in ES5, JavaScript is constantly evolving, and new features are released every year.`,
             `ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including arrow functions, destructuring, classes, promises, and modules.`,
           ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
+          ],
         },
         {
           title: "Regular Expressions",
           description: [
             `Regular expressions, often shortened to "regex" or "regexp", are patterns that help programmers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more complex, flexible matches.`,
             `In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.`,
+          ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
           ],
         },
         {
@@ -456,6 +130,15 @@ export default {
             `Debugging is the process of going through your code, finding any issues, and fixing them.`,
             `Issues in code generally come in three forms: syntax errors that prevent your program from running, runtime errors where your code has unexpected behavior, or logical errors where your code doesn't do what you intended.`,
             `In this course, you'll learn how to use the JavaScript console to debug programs and prevent common issues before they happen.`,
+          ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
           ],
         },
         {
@@ -472,12 +155,30 @@ export default {
             `To write an effective algorithm, it helps to break a problem down into smaller parts and think carefully about how to solve each part with code.`,
             `In this course, you'll learn the fundamentals of algorithmic thinking by writing algorithms that do everything from converting temperatures to handling complex 2D arrays.`,
           ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
+          ],
         },
         {
           title: "Object Oriented Programming",
           description: [
             `OOP, or Object Oriented Programming, is one of the major approaches to the software development process. In OOP, objects and classes organize code to describe things and what they can do.`,
             `In this course, you'll learn the basic principles of OOP in JavaScript, including the this keyword, prototype chains, constructors, and inheritance.`,
+          ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
           ],
         },
         {
@@ -486,11 +187,29 @@ export default {
             `Functional Programming is another popular approach to software development. In Functional Programming, code is organized into smaller, basic functions that can be combined to build complex programs.`,
             `In this course, you'll learn the core concepts of Functional Programming including pure functions, how to avoid mutations, and how to write cleaner code with methods like .map() and .filter().`,
           ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
+          ],
         },
         {
           title: "Intermediate Algorithm Scripting",
           description: [
             `Now that you know the basics of algorithmic thinking, along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.`,
+          ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
           ],
         },
         {
@@ -498,6 +217,15 @@ export default {
           description: [
             `This is it — time to put your new JavaScript skills to work. These projects are similar to the algorithm scripting challenges you've done before – just much more difficult.`,
             `Complete these 5 JavaScript projects to earn the JavaScript Algorithms and Data Structures certification.`,
+          ],
+          tests: [
+            "Comment Your JavaScript Code",
+            "Declare JavaScript Variables",
+            "Storing Values with the Assignment Operator",
+            "Assigning the Value of One Variable to Another",
+            "Initializing Variables with the Assignment Operator",
+            "Declare String Variables",
+            "Divide One Number by Another with JavaScript",
           ],
         },
       ],

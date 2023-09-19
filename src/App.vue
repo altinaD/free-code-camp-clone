@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <router-view />
     <section class="main-block">
       <div class="inner-block">
         <app-intro />
