@@ -1,0 +1,23 @@
+[33mcommit e1251a4f0fed7941c0d15650b2039d062d91d6b0[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: altyn <altynberdiyeva99@gmail.com>
+Date:   Tue Sep 19 07:12:36 2023 +0500
+
+    before removing vue-router and adding axios
+
+[33mcommit 3b09c9800dcf827f20df4e2e2fac172fb9ca5d38[m
+Author: altyn <altynberdiyeva99@gmail.com>
+Date:   Tue Sep 12 17:23:28 2023 +0500
+
+    before using firebase
+
+[33mcommit 0498e049295a1d28504808e0a8aa81ca9718f05c[m
+Author: altyn <altynberdiyeva99@gmail.com>
+Date:   Mon Sep 11 18:24:54 2023 +0500
+
+    before removing course-intro component
+
+[33mcommit c682807a5291ae97e6d14a1095da0ea68568ea58[m
+Author: altyn <altynberdiyeva99@gmail.com>
+Date:   Thu Sep 7 16:38:45 2023 +0500
+
+    initial

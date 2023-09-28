@@ -1,20 +1,23 @@
 <template>
   <div id="app">
     <Header />
-    <router-view />
     <section class="main-block">
       <div class="inner-block">
         <app-intro />
-        <courses />
+        <Suspense>
+          <template #default>
+            <courses />
+          </template>
+        </Suspense>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import courses from "./components/courses.vue";
 import appIntro from "./components/appIntro.vue";
 import Header from "./components/header/Header.vue";
-import courses from "./components/courses.vue";
 export default {
   components: {
     Header,
@@ -87,4 +90,9 @@ svg {
 .min-spacer {
   padding: 15px 0;
 }
+/////////////////////////
+/// 
+/// 
+/// 
+
 </style>
