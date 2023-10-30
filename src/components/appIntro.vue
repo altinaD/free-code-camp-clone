@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="max-spacer"></div>
-    <h1 class="big-header">JavaScript Algorithms and Data Structures</h1>
+    <h1 class="big-header">
+      JavaScript Algorithms and <br />
+      Data Structures
+    </h1>
     <div class="min-spacer"></div>
     <svg
       aria-hidden="true"

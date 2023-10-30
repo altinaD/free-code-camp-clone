@@ -3,7 +3,7 @@
     <div class="course" v-for="course in courses" :key="course.id">
       <h1 class="course-header">{{ course.title }}</h1>
       <div class="min-spacer"></div>
-      <p>{{ course.description }}</p>
+      <p class="course-description">{{ course.description }}</p>
       <div class="one-px-spacer"></div>
       <div @click="isOpen = !isOpen" class="course desc">
         <div class="course-test-section-title">
@@ -18,14 +18,9 @@
         </div>
         <span class="result"> <span id="test-result"> 0 / {{}}</span></span>
       </div>
-      <div class="course test" :class="{ open: isOpen }">
-        <ul
-          class="test-list"
-          v-for="test in course.tests"
-          :key="test.id"
-          @click="openTest(course)"
-        >
-          <li>
+      <ul class="course test" :class="{ open: isOpen }">
+        <li class="test-list" v-for="test in course.tests" :key="test.id">
+          <span @click="navTo(test)">
             <span>
               <svg
                 aria-hidden="true"
@@ -49,25 +44,17 @@
               </svg>
             </span>
             <span>
-              <!-- {{ test }} -->
-              <router-link to="/commentYourJavaScriptCode">Comment</router-link>
+              {{ test.value }}
             </span>
-          </li>
-        </ul>
-      </div>
-      <router-view></router-view>
+          </span>
+        </li>
+      </ul>
       <!-- /////////////////////////////// -->
-      <testModal
-        v-show="showTest"
-        :course="course"
-        @closeModal="showTest = false"
-      />
     </div>
   </div>
 </template>
 
 <script>
-import testModal from "./testModal.vue";
 import axios from "axios";
 import { ref } from "vue";
 export default {
@@ -77,15 +64,23 @@ export default {
       isOpen: ref(false),
       courses,
       showTest: ref(null),
+      isOverflow: ref(false),
     };
   },
-  components: {
-    testModal,
-  },
   methods: {
-    openTest(course) {
-      this.showTest = true;
-      course;
+    navTo(test) {
+      const path = this.createPathName(test.value);
+      this.$router.push(`/${path}`);
+      if (test.value == "") {
+        console.log("this is empty");
+      }
+      // this.isOverflow = test.value == ? false : true
+      this.$emit("overflowApp");
+    },
+    createPathName(str) {
+      str = str.toLowerCase();
+      str = str.replace(/ /g, "-");
+      return str;
     },
   },
 };
@@ -107,7 +102,7 @@ li {
   line-height: 1.5rem;
   color: #1b1b32;
   font-weight: 400;
-  margin-top: 20px;
+  padding: 5px 0;
   white-space: pre-line;
 }
 .one-px-spacer {
@@ -140,13 +135,13 @@ li {
   position: absolute;
   right: 15px;
 }
-.test-list {
+.course.test {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.test-list li {
+.test-list > span {
   width: 100%;
   padding: 8px 0;
   font-size: 1.13rem;
@@ -155,6 +150,12 @@ li {
   gap: 7px;
   align-items: center;
   cursor: pointer;
+}
+.test-list:hover {
+  background-color: #dfdfe2;
+}
+.test-list li span {
+  color: #000;
 }
 .test-list a {
   text-decoration: none;
@@ -172,5 +173,9 @@ li {
 }
 .course.desc {
   cursor: pointer;
+}
+.course-description {
+  font-size: 1.17rem;
+  line-height: 1.5;
 }
 </style>

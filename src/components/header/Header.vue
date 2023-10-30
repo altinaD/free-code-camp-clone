@@ -589,7 +589,7 @@ li {
   padding: 0% 10%;
 }
 
-.right-menu button:hover {
+.right-menu button:hover:not(.right-menu > li:last-of-type button) {
   background-color: #fff;
   color: #000;
 }
