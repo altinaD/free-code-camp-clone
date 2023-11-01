@@ -125,10 +125,6 @@
               </p>
             </li>
           </ul>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Architecto, maiores!
-          </p>
         </LeftScreen>
       </div>
       <RightScreen @resize-width="changeWidth">
@@ -168,19 +164,6 @@ export default {
 </script>
 
 <style scoped>
-.arrow-down {
-  min-width: 15px;
-  min-height: 15px;
-  width: 15px;
-  height: 15px;
-  display: inline;
-  vertical-align: middle;
-}
-.test-status-icon {
-  stroke: #fff;
-  width: 40px;
-  height: 40px;
-}
 .tests {
   width: 100%;
   display: flex;
@@ -194,8 +177,26 @@ export default {
   align-items: center;
   padding: 5px 10px;
 }
+.test:nth-child(2n + 1) {
+  background-color: #dfdfe2;
+}
 .test p {
   margin: 0;
   margin-left: 20px;
+}
+
+.arrow-down {
+  min-width: 15px;
+  min-height: 15px;
+  width: 15px;
+  height: 15px;
+  display: inline;
+  vertical-align: middle;
+}
+
+.left-screen .test-status-icon {
+  stroke: #fff;
+  width: 40px;
+  height: 40px;
 }
 </style>

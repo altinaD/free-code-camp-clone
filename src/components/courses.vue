@@ -16,7 +16,12 @@
           </svg>
           <p>Expand course</p>
         </div>
-        <span class="result"> <span id="test-result"> 0 / {{}}</span></span>
+        <span class="result">
+          <span id="test-result">
+            0 /
+            {{ course.tests.prototype.length }}</span
+          ></span
+        >
       </div>
       <ul class="course test" :class="{ open: isOpen }">
         <li class="test-list" v-for="test in course.tests" :key="test.id">
@@ -71,11 +76,7 @@ export default {
     navTo(test) {
       const path = this.createPathName(test.value);
       this.$router.push(`/${path}`);
-      if (test.value == "") {
-        console.log("this is empty");
-      }
-      // this.isOverflow = test.value == ? false : true
-      this.$emit("overflowApp");
+      // this.$emit("overflowApp");
     },
     createPathName(str) {
       str = str.toLowerCase();

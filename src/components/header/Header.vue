@@ -453,6 +453,12 @@ li:first-child input {
   border: none;
   background-color: inherit;
   font-family: "Lato", sans-serif;
+  width: 90%;
+  color: #ffffffcc;
+}
+
+li:first-child input:focus {
+  outline: none;
 }
 
 li:first-child form {

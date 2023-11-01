@@ -2,10 +2,10 @@
   <Header />
   <nav class="test-nav">
     <ol>
-      <router-link class="left" tag="li" to="/"
+      <router-link class="left" to="/"
         >JavaScript Algorithms and Data Structures</router-link
       >
-      <router-link class="right" tag="li" to="/">Basic JavaScript</router-link>
+      <router-link class="right" to="/">Basic JavaScript</router-link>
     </ol>
   </nav>
 </template>
@@ -35,6 +35,9 @@ ol {
   width: 55%;
   background-color: #d0d0d5;
   position: relative;
+}
+.left:hover {
+  text-decoration: underline;
 }
 .left::after {
   position: absolute;

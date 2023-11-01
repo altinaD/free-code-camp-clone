@@ -1,12 +1,12 @@
 <template>
-  <div id="app" :class="{ overflow: overflowApp }">
+  <div id="app">
     <Header />
     <section class="main-block">
       <div class="inner-block">
         <app-intro />
         <Suspense>
           <template #default>
-            <courses @overflowApp="overflowApp = !overflowApp" />
+            <courses />
           </template>
         </Suspense>
       </div>
@@ -24,11 +24,6 @@ export default {
     Header,
     appIntro,
     courses,
-  },
-  data() {
-    return {
-      overflowApp: false,
-    };
   },
 };
 </script>
@@ -66,10 +61,10 @@ svg {
   background-color: $secondary-bg-color;
   font-family: "Lato", sans-serif;
 }
-#app.overflow {
-  height: 100vh;
-  overflow: hidden;
-}
+// #app.overflow {
+//   height: 100vh;
+//   overflow: hidden;
+// }
 ::selection {
   background-color: $selection-color;
 }
