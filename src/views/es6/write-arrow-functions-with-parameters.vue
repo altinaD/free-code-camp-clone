@@ -4,51 +4,59 @@
     <div class="screen-divide">
       <div class="left-screen" ref="leftScreen">
         <LeftScreen>
-          <h1>Declare a Read-Only Variable with the const Keyword</h1>
+          <h1>Write Arrow Functions with Parameters</h1>
           <p>
-            The keyword <Code>let</Code> is not the only new way to declare
-            variables. In ES6, you can also declare variables using the
-            <Code>const</Code> keyword.
+            Just like a regular function, you can pass arguments into an arrow
+            function.
           </p>
-          <p>
-            <Code>const</Code> has all the awesome features that
-            <Code>let</Code> has, with the added bonus that variables declared
-            using <Code>const</Code> are read-only. They are a constant value,
-            which means that once a variable is assigned with
-            <Code>const</Code>, it cannot be reassigned:
-          </p>
-          <Comment
-            ><span class="green">const</span> <span class="red">FAV_PET</span>
-            <span class="green"> = "Cats";</span>
+          <Comment>
+            <span class="blue">const </span>
+            <span class="red">doubler </span>
+            <span class="black">= (item) => item * </span>
+            <span class="purple">2</span>
+            <span class="black">;</span>
             <div class="next"></div>
-            <span class="red">FAV_PET </span
-            ><span class="green"> = "Dogs";</span></Comment
-          >
+            <span class="red">doubler</span>
+            <span class="black">(</span>
+            <span class="purple">4</span>
+            <span class="black">);</span>
+          </Comment>
+          <p><Code>doubler(4)</Code> would return the value <Code>8</Code>.</p>
           <p>
-            The console will display an error due to reassigning the value of
-            <Code>FAV_PET</Code>.
+            If an arrow function has a single parameter, the parentheses
+            enclosing the parameter may be omitted.
           </p>
+          <Comment>
+            <span class="blue">const </span>
+            <span class="red">doubler </span>
+            <span class="black">= item => item * </span>
+            <span class="purple">2</span>
+            <span class="black">;</span>
+          </Comment>
           <p>
-            You should always name variables you don't want to reassign using
-            the <Code>const</Code> keyword. This helps when you accidentally
-            attempt to reassign a variable that is meant to stay constant.
+            It is possible to pass more than one argument into an arrow
+            function.
           </p>
+          <Comment>
+            <span class="blue">const </span>
+            <span class="red">multiplier </span>
+            <span class="black">= (item, multi) => item * multi;</span>
+            <div class="next"></div>
+            <span class="red">multiplier</span>
+            <span class="black">(</span>
+            <span class="purple">4</span>
+            <span class="black">,</span>
+            <span class="purple"> 2</span>
+            <span class="black">);</span>
+          </Comment>
           <p>
-            <b>Note: </b>It is common for developers to use uppercase variable
-            identifiers for immutable values and lowercase or camelCase for
-            mutable values (objects and arrays). You will learn more about
-            objects, arrays, and immutable and mutable values in later
-            challenges. Also in later challenges, you will see examples of
-            uppercase, lowercase, or camelCase variable identifiers.
+            <Code>multiplier(4, 2)</Code> would return the value <Code>8</Code>.
           </p>
           <hr />
           <p>
-            Change the code so that all variables are declared using
-            <Code>let</Code> or <Code>const</Code>. Use <Code>let</Code> when
-            you want the variable to change, and <Code>const</Code> when you
-            want the variable to remain constant. Also, rename variables
-            declared with <Code>const</Code> to conform to common practices. Do
-            not change the strings assigned to the variables.
+            Rewrite the <Code>myConcat</Code> function which appends contents of
+            <Code>arr2</Code> to <Code>arr1</Code>
+            so that the function uses arrow function syntax.
           </p>
           <hr />
           <Button>Run the Tests (Ctrl + Enter)</Button>
@@ -104,40 +112,7 @@
                   </svg>
                 </g>
               </svg>
-              <p><Code>var</Code> should not exist in your code.</p>
-            </li>
-            <li class="test">
-              <svg
-                class="test-status-icon"
-                height="50"
-                viewBox="0 0 200 200"
-                width="50"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <title>Initial</title>
-                  <circle
-                    cx="100"
-                    cy="99"
-                    fill="#0a0a23"
-                    r="95"
-                    stroke="#0a0a23"
-                    stroke-dasharray="null"
-                  ></circle>
-                  <svg
-                    height="200"
-                    viewBox="-13 -12 50 50"
-                    width="200"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
-                      fill="#fff"
-                    ></path>
-                  </svg>
-                </g>
-              </svg>
-              <p>You should change <Code>fCC</Code> to all uppercase.</p>
+              <p>You should replace the <Code>var</Code> keyword.</p>
             </li>
             <li class="test">
               <svg
@@ -171,8 +146,8 @@
                 </g>
               </svg>
               <p>
-                <Code>FCC</Code> should be a constant variable declared with
-                <Code>const</Code>.
+                <Code>myConcat</Code> should be a constant variable (by using
+                <Code>const</Code>).
               </p>
             </li>
             <li class="test">
@@ -207,8 +182,8 @@
                 </g>
               </svg>
               <p>
-                Waiting:The string assigned to <Code>FCC</Code> should not be
-                changed.
+                <Code>myConcat</Code> should be an arrow function with two
+                parameters
               </p>
             </li>
             <li class="test">
@@ -242,7 +217,7 @@
                   </svg>
                 </g>
               </svg>
-              <p><Code>fact</Code> should be declared with <Code>let</Code>.</p>
+              <p><Code>myConcat</Code> should return [1, 2, 3, 4, 5].</p>
             </li>
             <li class="test">
               <svg
@@ -275,20 +250,12 @@
                   </svg>
                 </g>
               </svg>
-              <p>
-                <Code>console.log</Code> should be changed to print the
-                <Code>FCC</Code> and <Code>fact</Code> variables.
-              </p>
+              <p>The <Code>function</Code> keyword should not be used.</p>
             </li>
           </ul>
         </LeftScreen>
       </div>
-      <RightScreen @resize-width="changeWidth">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos,
-          doloremque.
-        </p>
-      </RightScreen>
+      <RightScreen @resize-width="changeWidth"> </RightScreen>
     </div>
   </div>
 </template>

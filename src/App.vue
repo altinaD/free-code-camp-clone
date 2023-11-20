@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ overflow: overflow }">
     <Header />
     <section class="main-block">
       <div class="inner-block">
@@ -19,7 +19,23 @@
 import courses from "./components/courses.vue";
 import appIntro from "./components/appIntro.vue";
 import Header from "./components/header/Header.vue";
+// import { useRouter, useRoute } from 'vue-router'
 export default {
+  // setup(){
+  //   beforeRouteEnter(to, from){
+  //     if(to.path == ""){
+  //       this.overflow = true
+  //     }
+  //     else{
+  //       this.overflow = false
+  //     }
+  //   }
+  // },
+  data() {
+    return {
+      // overflow: ref(false),
+    };
+  },
   components: {
     Header,
     appIntro,
@@ -57,14 +73,15 @@ img,
 svg {
   display: block;
 }
+
 #app {
   background-color: $secondary-bg-color;
   font-family: "Lato", sans-serif;
 }
-// #app.overflow {
-//   height: 100vh;
-//   overflow: hidden;
-// }
+.overflow {
+  height: 100vh;
+  overflow: hidden;
+}
 ::selection {
   background-color: $selection-color;
 }
@@ -132,7 +149,7 @@ hr {
   position: fixed;
   right: 0;
   top: 97px;
-  padding: 0 35px;
+  //padding: 0 35px;
   min-height: 100vh;
 }
 
@@ -157,5 +174,67 @@ hr {
   background: inherit;
   z-index: 15;
   height: 100vh;
+}
+
+/////// styles for routing components
+
+.tests {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.test {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 5px 10px;
+}
+.test:nth-child(2n + 1) {
+  background-color: #dfdfe2;
+}
+.test p {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.arrow-down {
+  min-width: 15px;
+  min-height: 15px;
+  width: 15px;
+  height: 15px;
+  display: inline;
+  vertical-align: middle;
+}
+
+.left-screen .test-status-icon {
+  stroke: #fff;
+  width: 40px;
+  height: 40px;
+}
+.comment span {
+  letter-spacing: 1px;
+}
+span.black {
+  color: #000;
+}
+span.red {
+  color: #992900;
+}
+span.green {
+  color: #008040;
+}
+span.blue {
+  color: #2574a9;
+}
+span.purple {
+  color: #9932cc;
+}
+.next {
+  height: 6px;
+}
+.tab {
+  margin-left: 10px;
 }
 </style>

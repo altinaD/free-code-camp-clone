@@ -11,9 +11,12 @@
             variable using the <i>assignment</i> operator.
           </p>
           <Comment
-            >var <span class="black">myVar</span>; <br />
-            <span class="black">myVar</span> = 5; <br />
-            var <span class="black">myVar</span>; <br />
+            >var <span class="black">myVar</span>;
+            <div class="next"></div>
+            <span class="black">myVar</span> = 5;
+            <div class="next"></div>
+            var <span class="black">myVar</span>;
+            <div class="next"></div>
             <span class="black">myVar</span> = <span class="black">myVar</span>;
           </Comment>
           <p>
@@ -191,45 +194,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.tests {
-  width: 100%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-.test {
-  width: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding: 5px 10px;
-}
-.test:nth-child(2n + 1) {
-  background-color: #dfdfe2;
-}
-.test p {
-  margin: 0;
-  margin-left: 20px;
-}
-
-.arrow-down {
-  min-width: 15px;
-  min-height: 15px;
-  width: 15px;
-  height: 15px;
-  display: inline;
-  vertical-align: middle;
-}
-
-.left-screen .test-status-icon {
-  stroke: #fff;
-  width: 40px;
-  height: 40px;
-}
-
-span.black {
-  color: #000;
-}
-</style>

@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$navHeight: 25px;
+$navHeight: 27px;
 nav {
   height: $navHeight;
 }

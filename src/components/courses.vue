@@ -5,7 +5,7 @@
       <div class="min-spacer"></div>
       <p class="course-description">{{ course.description }}</p>
       <div class="one-px-spacer"></div>
-      <div @click="isOpen = !isOpen" class="course desc">
+      <div @click="toggleOpen(course)" class="course desc">
         <div class="course-test-section-title">
           <svg class="arrow" viewBox="0 0 100 100" width="25px">
             <polygon
@@ -19,11 +19,13 @@
         <span class="result">
           <span id="test-result">
             0 /
-            {{ course.tests.prototype.length }}</span
+            {{
+              Number(this.courses[this.courses.indexOf(course)].tests.length)
+            }}</span
           ></span
         >
       </div>
-      <ul class="course test" :class="{ open: isOpen }">
+      <ul class="course test">
         <li class="test-list" v-for="test in course.tests" :key="test.id">
           <span @click="navTo(test)">
             <span>
@@ -49,7 +51,7 @@
               </svg>
             </span>
             <span>
-              {{ test.value }}
+              {{ test }}
             </span>
           </span>
         </li>
@@ -74,109 +76,18 @@ export default {
   },
   methods: {
     navTo(test) {
-      const path = this.createPathName(test.value);
+      const path = this.createPathName(test);
       this.$router.push(`/${path}`);
-      // this.$emit("overflowApp");
     },
     createPathName(str) {
       str = str.toLowerCase();
       str = str.replace(/ /g, "-");
       return str;
     },
+    len(tsts) {
+      console.log(Number(tsts.length));
+      return Number(tsts.length);
+    },
   },
 };
 </script>
-
-<style scoped>
-.course {
-  background-color: #fff;
-  padding: 15px;
-  position: relative;
-  margin-top: 30px;
-}
-.course .course-header {
-  font-size: 1.5rem;
-}
-
-li {
-  font-size: 1.17rem;
-  line-height: 1.5rem;
-  color: #1b1b32;
-  font-weight: 400;
-  padding: 5px 0;
-  white-space: pre-line;
-}
-.one-px-spacer {
-  margin-top: 15px;
-  width: 100%;
-  position: absolute;
-  height: 4px;
-  background-color: #f5f6f7;
-  left: 0;
-}
-.course-test-section-title {
-  display: inline-block;
-}
-.course-test-section-title .arrow {
-  width: 14px;
-}
-.course-test-section-title svg,
-.course-test-section-title p {
-  display: inline;
-}
-.course-test-section-title p {
-  margin-left: 1rem;
-}
-
-.result {
-  position: relative;
-  display: contents;
-}
-.result #test-result {
-  position: absolute;
-  right: 15px;
-}
-.course.test {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.test-list > span {
-  width: 100%;
-  padding: 8px 0;
-  font-size: 1.13rem;
-  font-family: inherit;
-  display: flex;
-  gap: 7px;
-  align-items: center;
-  cursor: pointer;
-}
-.test-list:hover {
-  background-color: #dfdfe2;
-}
-.test-list li span {
-  color: #000;
-}
-.test-list a {
-  text-decoration: none;
-  color: #000;
-}
-
-.course.test {
-  margin-top: 0;
-  padding: 0;
-  display: none;
-}
-.test.open {
-  display: block;
-  /* flex-direction: column; */
-}
-.course.desc {
-  cursor: pointer;
-}
-.course-description {
-  font-size: 1.17rem;
-  line-height: 1.5;
-}
-</style>

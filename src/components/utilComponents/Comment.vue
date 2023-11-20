@@ -10,6 +10,7 @@
   padding: 1rem;
   width: 100%;
   margin: 15px 0;
+  font-size: 1.12rem;
 }
 .comment span {
   color: #62707f;
