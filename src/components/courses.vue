@@ -1,11 +1,21 @@
 <template>
   <div class="courses-section">
-    <div class="course" v-for="course in courses" :key="course.id">
-      <h1 class="course-header">{{ course.title }}</h1>
+    <div class="course" v-for="(course, index) in courses" :key="index">
+      <h1 class="course-header" :id="courseTitle(course.title)">
+        {{ course.title }}
+      </h1>
       <div class="min-spacer"></div>
-      <p class="course-description">{{ course.description }}</p>
+      <ul class="course-description">
+        <li v-for="description in course.descriptions" :key="description.id">
+          {{ description }}
+        </li>
+      </ul>
       <div class="one-px-spacer"></div>
-      <div @click="toggleOpen(course)" class="course desc">
+      <div
+        @click="states[index] = !states[index]"
+        class="course desc"
+        :key="course.id"
+      >
         <div class="course-test-section-title">
           <svg class="arrow" viewBox="0 0 100 100" width="25px">
             <polygon
@@ -25,9 +35,14 @@
           ></span
         >
       </div>
-      <ul class="course test">
+      <ul
+        class="course test"
+        ref="test"
+        v-show="states[index]"
+        :key="course.id"
+      >
         <li class="test-list" v-for="test in course.tests" :key="test.id">
-          <span @click="navTo(test)">
+          <span @click="navTo(test, course)">
             <span>
               <svg
                 aria-hidden="true"
@@ -56,7 +71,6 @@
           </span>
         </li>
       </ul>
-      <!-- /////////////////////////////// -->
     </div>
   </div>
 </template>
@@ -72,22 +86,138 @@ export default {
       courses,
       showTest: ref(null),
       isOverflow: ref(false),
+      openState: ref(null),
+      // state: ref(false),
+      states: ref([
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]),
     };
   },
   methods: {
-    navTo(test) {
+    navTo(test, course) {
+      const section = this.createPathName(course.title);
       const path = this.createPathName(test);
-      this.$router.push(`/${path}`);
+      this.$router.push(`/${section}/${path}`);
     },
     createPathName(str) {
       str = str.toLowerCase();
       str = str.replace(/ /g, "-");
       return str;
     },
-    len(tsts) {
-      console.log(Number(tsts.length));
-      return Number(tsts.length);
+    // //////////// for course toggle
+    toggleOpen(id) {
+      this.states[id] = !this.states[id];
+    },
+    courseTitle(title) {
+      return this.createPathName(title);
     },
   },
 };
 </script>
+
+<style scoped>
+.course {
+  background-color: #fff;
+  padding: 15px;
+  position: relative;
+  margin-top: 30px;
+}
+.course .course-header {
+  font-size: 1.5rem;
+}
+
+li {
+  font-size: 1.17rem;
+  line-height: 1.5rem;
+  color: #1b1b32;
+  font-weight: 400;
+  padding: 5px 0;
+  white-space: pre-line;
+}
+.one-px-spacer {
+  margin-top: 15px;
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  background-color: #f5f6f7;
+  left: 0;
+}
+.course-test-section-title {
+  display: inline-block;
+}
+.course-test-section-title .arrow {
+  width: 14px;
+}
+.course-test-section-title svg,
+.course-test-section-title p {
+  display: inline;
+}
+.course-test-section-title p {
+  margin-left: 1rem;
+}
+
+.result {
+  position: relative;
+  display: contents;
+}
+.result #test-result {
+  position: absolute;
+  right: 15px;
+}
+.course.test {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.test-list > span {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 1.13rem;
+  font-family: inherit;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  cursor: pointer;
+}
+.test-list:hover {
+  background-color: #dfdfe2;
+}
+.test-list li span {
+  color: #000;
+}
+.test-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+.course.test {
+  margin-top: 0;
+  padding: 0;
+  display: block;
+  /* display: none; */
+}
+
+/* .course.test.open {
+  display: block;
+} */
+.course.desc {
+  cursor: pointer;
+}
+.course-description {
+  font-size: 1.17rem;
+  line-height: 1.5;
+}
+.course-description li {
+  padding-bottom: 1rem;
+}
+</style>

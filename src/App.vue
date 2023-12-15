@@ -11,7 +11,9 @@
         </Suspense>
       </div>
     </section>
-    <router-view></router-view>
+    <section class="components">
+      <router-view></router-view>
+    </section>
   </div>
 </template>
 
@@ -214,7 +216,11 @@ hr {
   height: 40px;
 }
 .comment span {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #62707f;
+  font-size: 1.04rem;
+  vertical-align: middle;
 }
 span.black {
   color: #000;
@@ -230,6 +236,9 @@ span.blue {
 }
 span.purple {
   color: #9932cc;
+}
+span.brown {
+  color: #856514;
 }
 .next {
   height: 6px;

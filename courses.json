@@ -2,7 +2,10 @@
   "courses": [
     {
       "title": "Basic JavaScript",
-      "description": "JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers.\n\n In this course, you'll learn fundamental programming concepts in JavaScript. You'll start with basic data structures like numbers and strings. Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more.",
+      "descriptions": [
+        "JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers.",
+        "In this course, you' ll learn fundamental programming concepts in JavaScript.You 'll start with basic data structures like numbers and strings. Then you' ll learn to work with arrays, objects, functions, loops, if / else statements, and more."
+      ],
       "adress": "basic-js",
       "tests": [
         "Comment Your JavaScript Code",
@@ -23,7 +26,11 @@
     },
     {
       "title": "ES6",
-      "description": "ECMAScript, or ES, is a standardized version of JavaScript. Because all major browsers follow this specification, the terms ECMAScript and JavaScript are interchangeable.\n\n Most of the JavaScript you've learned up to this point was in ES5 (ECMAScript 5), which was finalized in 2009. While you can still write programs in ES5, JavaScript is constantly evolving, and new features are released every year.\n\n ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including arrow functions, destructuring, classes, promises, and modules.\n\n",
+      "descriptions": [
+        "ECMAScript, or ES, is a standardized version of JavaScript. Because all major browsers follow this specification, the terms ECMAScript and JavaScript are interchangeable.",
+        "Most of the JavaScript you've learned up to this point was in ES5 (ECMAScript 5), which was finalized in 2009. While you can still write programs in ES5, JavaScript is constantly evolving, and new features are released every year.",
+        "ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including arrow functions, destructuring, classes, promises, and modules."
+      ],
       "adress": "es6",
       "tests": [
         "Compare Scopes of the var and let Keywords",
@@ -59,115 +66,103 @@
     },
     {
       "title": "Regular Expressions",
-      "description": "Regular expressions, often shortened to 'regex' or 'regexp', are patterns that help programmers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more complex, flexible matches.\n\n In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.",
+      "descriptions": [
+        "Regular expressions, often shortened to 'regex' or 'regexp', are patterns that help programmers match, search, and replace text. Regular expressions are very powerful, but can be hard to read because they use special characters to make more complex, flexible matches.",
+        "In this course, you'll learn how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want."
+      ],
       "adress": "regex",
       "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
+        "Using the Test Method",
+        "Match Literal Strings",
+        "Match a Literal String with Different Possibilities",
+        "Ignore Case While Matching",
+        "Extract Matches",
+        "Find More Than the First Match",
+        "Match Anything with Wildcard Period"
       ]
     },
     {
       "title": "Debugging",
-      "description": "Debugging is the process of going through your code, finding any issues, and fixing them.\n\n Issues in code generally come in three forms: syntax errors that prevent your program from running, runtime errors where your code has unexpected behavior, or logical errors where your code doesn't do what you intended.\n\n In this course, you'll learn how to use the JavaScript console to debug programs and prevent common issues before they happen.",
+      "descriptions": [
+        "Debugging is the process of going through your code, finding any issues, and fixing them.",
+        "Issues in code generally come in three forms: syntax errors that prevent your program from running, runtime errors where your code has unexpected behavior, or logical errors where your code doesn't do what you intended.",
+        "In this course, you'll learn how to use the JavaScript console to debug programs and prevent common issues before they happen."
+      ],
       "adress": "debugging",
       "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
+        "Use the JavaScript Console to Check the Value of a Variable",
+        "Understanding the Differences between the freeCodeCamp and Browser Console",
+        "Use typeof to Check the Type of a Variable",
+        "Catch Misspelled Variable and Function Names"
       ]
     },
     {
       "title": "Basic Data Structures",
-      "description": "Data can be stored and accessed in many ways. You already know some common JavaScript data structures — arrays and objects.\n\n In this Basic Data Structures course, you'll learn more about the differences between arrays and objects, and which to use in different situations. You'll also learn how to use helpful JS methods like splice() and Object.keys() to access and manipulate data.",
+      "descriptions": [
+        "Data can be stored and accessed in many ways. You already know some common JavaScript data structures — arrays and objects.",
+        "In this Basic Data Structures course, you'll learn more about the differences between arrays and objects, and which to use in different situations. You'll also learn how to use helpful JS methods like splice() and Object.keys() to access and manipulate data."
+      ],
       "adress": "basic-ds",
       "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
+        "Use an Array to Store a Collection of Data",
+        "Access an Array's Contents Using Bracket Notation",
+        "Add Items to an Array with push() and unshift()"
       ]
     },
     {
       "title": "Basic Algorithm Scripting",
-      "description": "An algorithm is a series of step-by-step instructions that describe how to do something.\n\n To write an effective algorithm, it helps to break a problem down into smaller parts and think carefully about how to solve each part with code.\n\n In this course, you'll learn the fundamentals of algorithmic thinking by writing algorithms that do everything from converting temperatures to handling complex 2D arrays.",
+      "descriptions": [
+        "An algorithm is a series of step-by-step instructions that describe how to do something.",
+        "To write an effective algorithm, it helps to break a problem down into smaller parts and think carefully about how to solve each part with code.",
+        "In this course, you'll learn the fundamentals of algorithmic thinking by writing algorithms that do everything from converting temperatures to handling complex 2D arrays."
+      ],
       "adress": "basic-as",
       "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
+        "Convert Celsius to Fahrenheit",
+        "Reverse a String",
+        "Factorialize a Number"
       ]
     },
     {
       "title": "Object Oriented Programming",
-      "description": "OOP, or Object Oriented Programming, is one of the major approaches to the software development process. In OOP, objects and classes organize code to describe things and what they can do.\n\n In this course, you'll learn the basic principles of OOP in JavaScript, including the this keyword, prototype chains, constructors, and inheritance.",
+      "descriptions": [
+        "OOP, or Object Oriented Programming, is one of the major approaches to the software development process. In OOP, objects and classes organize code to describe things and what they can do.",
+        "In this course, you'll learn the basic principles of OOP in JavaScript, including the this keyword, prototype chains, constructors, and inheritance."
+      ],
       "adress": "oop",
       "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
+        "Create a Basic JavaScript Object",
+        "Use Dot Notation to Access the Properties of an Object"
       ]
     },
     {
       "title": "Functional Programming",
-      "description": "Functional Programming is another popular approach to software development. In Functional Programming, code is organized into smaller, basic functions that can be combined to build complex programs.\n\n In this course, you'll learn the core concepts of Functional Programming including pure functions, how to avoid mutations, and how to write cleaner code with methods like .map() and .filter().",
+      "descriptions": [
+        "Functional Programming is another popular approach to software development. In Functional Programming, code is organized into smaller, basic functions that can be combined to build complex programs.",
+        "In this course, you'll learn the core concepts of Functional Programming including pure functions, how to avoid mutations, and how to write cleaner code with methods like .map() and .filter()."
+      ],
       "address": "func-prog",
       "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
+        "Learn About Functional Programming",
+        "Understand Functional Programming Terminology"
       ]
     },
     {
       "title": "Intermediate Algorithm Scripting",
-      "description": "Now that you know the basics of algorithmic thinking, along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.",
+      "descriptions": [
+        "Now that you know the basics of algorithmic thinking, along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges."
+      ],
       "address": "inter-as",
-      "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
-      ]
+      "tests": ["Sum All Numbers in a Range", "Diff Two Arrays"]
     },
     {
       "title": "JavaScript Algorithms and Data Structures Projects",
-      "description": "This is it — time to put your new JavaScript skills to work. These projects are similar to the algorithm scripting challenges you've done before – just much more difficult.\n\n Complete these 5 JavaScript projects to earn the JavaScript Algorithms and Data Structures certification.",
+      "descriptions": [
+        "This is it — time to put your new JavaScript skills to work. These projects are similar to the algorithm scripting challenges you've done before – just much more difficult.",
+        "Complete these 5 JavaScript projects to earn the JavaScript Algorithms and Data Structures certification."
+      ],
       "address": "jsdsa",
-      "tests": [
-        "Comment Your JavaScript Code",
-        "Declare JavaScript Variables",
-        "Storing Values with the Assignment Operator",
-        "Assigning the Value of One Variable to Another",
-        "Initializing Variables with the Assignment Operator",
-        "Declare String Variables",
-        "Divide One Number by Another with JavaScript"
-      ]
+      "tests": ["Palindrome Checker", "Roman Numeral Converter"]
     }
   ]
 }

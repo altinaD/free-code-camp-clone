@@ -5,7 +5,11 @@
       <router-link class="left" to="/"
         >JavaScript Algorithms and Data Structures</router-link
       >
-      <router-link class="right" to="/">Basic JavaScript</router-link>
+      <router-link
+        class="right"
+        :to="{ path: '/', hash: '#basic-javascript' }"
+        >{{ title }}</router-link
+      >
     </ol>
   </nav>
 </template>
@@ -15,6 +19,25 @@ import Header from "../header/Header.vue";
 export default {
   components: {
     Header,
+  },
+  data() {
+    return {
+      title: "",
+      path: "",
+    };
+  },
+  mounted() {
+    let path = this.$route.path;
+    let ndx = path.lastIndexOf("/");
+    let res = String(path.slice(1, ndx));
+    this.path = "/#" + res;
+    console.log(this.path);
+    res = res.split("-");
+    for (let x = 0; x < res.length; x++) {
+      res[x] = res[x].charAt(0).toUpperCase() + res[x].slice(1);
+    }
+    res = res.join(" ");
+    this.title = res;
   },
 };
 </script>

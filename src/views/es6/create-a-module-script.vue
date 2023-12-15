@@ -4,10 +4,42 @@
     <div class="screen-divide">
       <div class="left-screen" ref="leftScreen">
         <LeftScreen>
-          <h1>Compare Scopes of the var and let Keywords</h1>
-
+          <h1>Create a Module Script</h1>
+          <p>
+            JavaScript started with a small role to play on an otherwise mostly
+            HTML web. Today, it’s huge, and some websites are built almost
+            entirely with JavaScript. In order to make JavaScript more modular,
+            clean, and maintainable; ES6 introduced a way to easily share code
+            among JavaScript files. This involves exporting parts of a file for
+            use in one or more other files, and importing the parts you need,
+            where you need them. In order to take advantage of this
+            functionality, you need to create a script in your HTML document
+            with a <Code>type</Code> of <Code>module</Code>. Here’s an example:
+          </p>
+          <Comment>
+            <span class="black">&lt;</span>
+            <span class="red">script </span>
+            <span class="green">type</span>
+            <span class="black">="</span>
+            <span class="blue">module</span>
+            <span class="black">" </span>
+            <span class="green">src</span>
+            <span class="black">="</span>
+            <span class="blue">filename.js</span>
+            <span class="black">"&gt;&lt;/</span>
+            <span class="red">script</span>
+            <span class="black">&gt;</span>
+          </Comment>
+          <p>
+            A script that uses this <Code>module</Code> type can now use the
+            <Code>import</Code> and <Code>export</Code> features you will learn
+            about in the upcoming challenges.
+          </p>
           <hr />
-          <p></p>
+          <p>
+            Add a script to the HTML document of type <Code>module</Code> and
+            give it the source file of <Code>index.js</Code>
+          </p>
           <hr />
           <Button>Run the Tests (Ctrl + Enter)</Button>
           <Button>Reset this lesson</Button>
@@ -62,7 +94,7 @@
                   </svg>
                 </g>
               </svg>
-              <p><Code>var</Code> should not exist in code.</p>
+              <p>You should create a <Code>script</Code> tag.</p>
             </li>
             <li class="test">
               <svg
@@ -96,9 +128,8 @@
                 </g>
               </svg>
               <p>
-                The variable <Code>i</Code> declared in the
-                <Code>if</Code> statement should equal the string
-                <Code>block scope</Code>.
+                Your <Code>script</Code> tag should have the
+                <Code>type</Code> attribute with a value of <Code>module</Code>.
               </p>
             </li>
             <li class="test">
@@ -133,8 +164,8 @@
                 </g>
               </svg>
               <p>
-                <Code>checkScope()</Code> should return the string
-                <Code>function scope</Code>
+                Your <Code>script</Code> tag should have a <Code>src</Code> of
+                <Code>index.js</Code>
               </p>
             </li>
           </ul>
@@ -148,16 +179,16 @@
 <script>
 import Navigation from "@/components/utilComponents/Navigation.vue";
 import LeftScreen from "@/components/utilComponents/LeftScreen.vue";
-// import Code from "@/components/utilComponents/Code.vue";
-// import Comment from "@/components/utilComponents/Comment.vue";
+import Code from "@/components/utilComponents/Code.vue";
+import Comment from "@/components/utilComponents/Comment.vue";
 import Button from "@/components/utilComponents/Button.vue";
 import RightScreen from "@/components/utilComponents/RightScreen.vue";
 export default {
   components: {
     Navigation,
     LeftScreen,
-    // Code,
-    // Comment,
+    Code,
+    Comment,
     Button,
     RightScreen,
   },
