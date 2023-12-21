@@ -37,8 +37,103 @@
             all you need to know is that arrays are also capable of storing
             complex objects.
           </p>
+          <Comment>
+            <span class="blue">let </span>
+            <span class="black">complexArray = [</span>
+            <div class="next"></div>
+            <span class="tab black">[</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">{</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">one</span>
+            <span class="black">: </span>
+            <span class="purple">1</span>
+            <span class="black">,</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">two</span>
+            <span class="black">: </span>
+            <span class="purple">2</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">},</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">{</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">three</span>
+            <span class="black">: </span>
+            <span class="purple">3</span>
+            <span class="black">,</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">four</span>
+            <span class="black">: </span>
+            <span class="purple">4</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">}</span>
+            <div class="next"></div>
+            <span class="tab black">],</span>
+            <div class="next"></div>
+            <span class="tab black">[</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">{</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">a</span>
+            <span class="black">: </span>
+            <span class="purple">"a"</span>
+            <span class="black">,</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">b</span>
+            <span class="black">: </span>
+            <span class="purple">"b"</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">},</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">{</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">c</span>
+            <span class="black">: </span>
+            <span class="purple">"c"</span>
+            <span class="black">,</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span
+            ><span class="tab"></span>
+            <span class="red">d</span>
+            <span class="black">: </span>
+            <span class="purple">"d"</span>
+            <div class="next"></div>
+            <span class="tab"></span><span class="tab"></span>
+            <span class="black">}</span>
+            <div class="next"></div>
+            <span class="tab black">]</span>
+            <div class="next"></div>
+            <span class="black">];</span>
+          </Comment>
           <hr />
-          <p></p>
+          <p>
+            We have defined a variable called <Code>yourArray</Code>. Complete
+            the statement by assigning an array of at least 5 elements in length
+            to the <Code>yourArray</Code> variable. Your array should contain at
+            least one <i>string</i>, one <i>number</i>, and one <i>boolean</i>.
+          </p>
           <hr />
           <Button>Run the Tests (Ctrl + Enter)</Button>
           <Button>Reset this lesson</Button>
@@ -93,7 +188,40 @@
                   </svg>
                 </g>
               </svg>
-              <p>You should create a <Code>script</Code> tag.</p>
+              <p><Code>yourArray</Code> should be an array.</p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p><Code>yourArray</Code> should be at least 5 elements long.</p>
             </li>
             <li class="test">
               <svg
@@ -127,8 +255,8 @@
                 </g>
               </svg>
               <p>
-                Your <Code>script</Code> tag should have the
-                <Code>type</Code> attribute with a value of <Code>module</Code>.
+                <Code>yourArray</Code> should contain at least one
+                <Code>boolean</Code>.
               </p>
             </li>
             <li class="test">
@@ -163,8 +291,44 @@
                 </g>
               </svg>
               <p>
-                Your <Code>script</Code> tag should have a <Code>src</Code> of
-                <Code>index.js</Code>
+                <Code>yourArray</Code> should contain at least one
+                <Code>number</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>yourArray</Code> should contain at least one
+                <Code>string</Code>.
               </p>
             </li>
           </ul>
@@ -200,3 +364,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+span {
+  font-size: 1.2rem;
+}
+</style>

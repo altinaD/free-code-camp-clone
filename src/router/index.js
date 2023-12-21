@@ -97,7 +97,6 @@ import diffTwoArrs from "@/views/inter-as/diff-two-arrays.vue";
 // js algorithms and ds projects
 
 import palindromeChecker from "@/views/jsdsa/palindrome-checker.vue";
-import romanNumeralConverter from "@/views/jsdsa/roman-numeral-converter.vue";
 
 const routes = [
   {
@@ -404,17 +403,17 @@ const routes = [
   //   basic as
 
   {
-    path: "/basic-algorith-scripting/convert-celsius-to-fahrenheit",
+    path: "/basic-algorithm-scripting/convert-celsius-to-fahrenheit",
     component: convertCelsiusToFahr,
     name: "convertCelsiusToFahr",
   },
   {
-    path: "/basic-algorith-scripting/reverse-a-string",
+    path: "/basic-algorithm-scripting/reverse-a-string",
     component: reverseAStr,
     name: "reverseAStr",
   },
   {
-    path: "/basic-algorith-scripting/factorialize-a-number",
+    path: "/basic-algorithm-scripting/factorialize-a-number",
     component: factorANum,
     name: "factorANum",
   },
@@ -434,12 +433,12 @@ const routes = [
   //   func program
 
   {
-    path: "/functional-progamming/learn-about-functional-programming",
+    path: "/functional-programming/learn-about-functional-programming",
     component: learnAboutFuncProgram,
     name: "learnAboutFuncProgram",
   },
   {
-    path: "/functional-progamming/understand-functional-programming-terminology",
+    path: "/functional-programming/understand-functional-programming-terminology",
     component: undersFuncProgTermin,
     name: "undersFuncProgTermin",
   },
@@ -461,11 +460,6 @@ const routes = [
     path: "/javascript-algorithms-and-data-structures-projects/palindrome-checker",
     component: palindromeChecker,
     name: "palindromeChecker",
-  },
-  {
-    path: "/javascript-algorithms-and-data-structures-projects/roman-numeral-converter",
-    component: romanNumeralConverter,
-    name: "romanNumeralConverter",
   },
 ];
 

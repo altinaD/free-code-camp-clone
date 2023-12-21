@@ -199,6 +199,7 @@ hr {
 .test p {
   margin: 0;
   margin-left: 20px;
+  width: calc(100% - 40px);
 }
 
 .arrow-down {

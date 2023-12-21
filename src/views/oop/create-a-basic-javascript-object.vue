@@ -4,9 +4,54 @@
     <div class="screen-divide">
       <div class="left-screen" ref="leftScreen">
         <LeftScreen>
-          <h1>Create a Module Script</h1>
+          <h1>Create a Basic JavaScript Object</h1>
+          <p>
+            Think about things people see every day, like cars, shops, and
+            birds. These are all <i>objects</i>: tangible things people can
+            observe and interact with.
+          </p>
+          <p>
+            What are some qualities of these objects? A car has wheels. Shops
+            sell items. Birds have wings.
+          </p>
+          <p>
+            These qualities, or <i>properties</i>, define what makes up an
+            object. Note that similar objects share the same properties, but may
+            have different values for those properties. For example, all cars
+            have wheels, but not all cars have the same number of wheels.
+          </p>
+          <p>
+            Objects in JavaScript are used to model real-world objects, giving
+            them properties and behavior just like their real-world
+            counterparts. Here's an example using these concepts to create a
+            <Code>duck</Code> object:
+          </p>
+          <Comment>
+            <span class="blue">let </span>
+            <span class="black">duck = {</span>
+            <div class="next"></div>
+            <span class="tab red">name</span>
+            <span class="black">: </span>
+            <span class="green">"Aflac"</span>
+            <span class="black">,</span>
+            <div class="next"></div>
+            <span class="tab red">numLegs</span>
+            <span class="black">: </span>
+            <span class="purple">2</span>
+            <div class="next"></div>
+            <span class="black">};</span>
+          </Comment>
+          <p>
+            This <Code>duck</Code> object has two property/value pairs: a
+            <Code>name</Code> of <Code>Aflac</Code> and a
+            <Code>numLegs</Code> of 2.
+          </p>
           <hr />
-          <p></p>
+          <p>
+            Create a <Code>dog</Code> object with <Code>name</Code> and
+            <Code>numLegs</Code> properties, and set them to a string and a
+            number, respectively.
+          </p>
           <hr />
           <Button>Run the Tests (Ctrl + Enter)</Button>
           <Button>Reset this lesson</Button>
@@ -61,7 +106,7 @@
                   </svg>
                 </g>
               </svg>
-              <p>You should create a <Code>script</Code> tag.</p>
+              <p><Code>dog</Code> should be an object.</p>
             </li>
             <li class="test">
               <svg
@@ -95,8 +140,8 @@
                 </g>
               </svg>
               <p>
-                Your <Code>script</Code> tag should have the
-                <Code>type</Code> attribute with a value of <Code>module</Code>.
+                <Code>dog</Code> should have a <Code>name</Code> property set to
+                a string.
               </p>
             </li>
             <li class="test">
@@ -131,8 +176,8 @@
                 </g>
               </svg>
               <p>
-                Your <Code>script</Code> tag should have a <Code>src</Code> of
-                <Code>index.js</Code>
+                <Code>dog</Code> should have a <Code>numLegs</Code> property set
+                to a number.
               </p>
             </li>
           </ul>
@@ -146,16 +191,16 @@
 <script>
 import Navigation from "@/components/utilComponents/Navigation.vue";
 import LeftScreen from "@/components/utilComponents/LeftScreen.vue";
-// import Code from "@/components/utilComponents/Code.vue";
-// import Comment from "@/components/utilComponents/Comment.vue";
+import Code from "@/components/utilComponents/Code.vue";
+import Comment from "@/components/utilComponents/Comment.vue";
 import Button from "@/components/utilComponents/Button.vue";
 import RightScreen from "@/components/utilComponents/RightScreen.vue";
 export default {
   components: {
     Navigation,
     LeftScreen,
-    // Code,
-    // Comment,
+    Code,
+    Comment,
     Button,
     RightScreen,
   },

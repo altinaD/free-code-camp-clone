@@ -4,9 +4,32 @@
     <div class="screen-divide">
       <div class="left-screen" ref="leftScreen">
         <LeftScreen>
-          <h1>Create a Module Script</h1>
-          <hr />
-          <p></p>
+          <h1>Palindrome Checker</h1>
+          <p>
+            Return <Code>true</Code> if the given string is a palindrome.
+            Otherwise, return <Code>false</Code>.
+          </p>
+          <p>
+            A <i>palindrome</i> is a word or sentence that's spelled the same
+            way both forward and backward, ignoring punctuation, case, and
+            spacing.
+          </p>
+          <p>
+            <b>Note:</b> You'll need to remove
+            <b>all non-alphanumeric characters</b>
+            (punctuation, spaces and symbols) and turn everything into the same
+            case (lower or upper case) in order to check for palindromes.
+          </p>
+          <p>
+            We'll pass strings with varying formats, such as
+            <Code>racecar</Code>, <Code>RaceCar</Code>, and
+            <Code>race CAR</Code> among others.
+          </p>
+          <p>
+            We'll also pass strings with special symbols, such as
+            <Code>2A3*3a2</Code>, <Code>2A3 3a2</Code>, and
+            <Code>2_A3*3#A2</Code>.
+          </p>
           <hr />
           <Button>Run the Tests (Ctrl + Enter)</Button>
           <Button>Reset this lesson</Button>
@@ -61,7 +84,7 @@
                   </svg>
                 </g>
               </svg>
-              <p>You should create a <Code>script</Code> tag.</p>
+              <p><Code>palindrome("eye")</Code> should return a boolean.</p>
             </li>
             <li class="test">
               <svg
@@ -95,8 +118,7 @@
                 </g>
               </svg>
               <p>
-                Your <Code>script</Code> tag should have the
-                <Code>type</Code> attribute with a value of <Code>module</Code>.
+                <Code>palindrome("eye")</Code> should return <Code>true</Code>.
               </p>
             </li>
             <li class="test">
@@ -131,8 +153,367 @@
                 </g>
               </svg>
               <p>
-                Your <Code>script</Code> tag should have a <Code>src</Code> of
-                <Code>index.js</Code>
+                <Code>palindrome("_eye")</Code> should return <Code>true</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("race car")</Code> should return
+                <Code>true</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("not a palindrome")</Code> should return
+                <Code>false</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("A man, a plan, a canal. Panama")</Code> should
+                return <Code>true</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("never odd or even")</Code> should return
+                <Code>true</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("nope")</Code> should return
+                <Code>false</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("almostomla")</Code> should return
+                <Code>false</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("My age is 0, 0 si ega ym.")</Code> should
+                return <Code>true</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("1 eye for of 1 eye.")</Code> should return
+                <Code>false</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("0_0 (: /-\ :) 0-0")</Code> should return
+                <Code>true</Code>.
+              </p>
+            </li>
+            <li class="test">
+              <svg
+                class="test-status-icon"
+                height="50"
+                viewBox="0 0 200 200"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <title>Initial</title>
+                  <circle
+                    cx="100"
+                    cy="99"
+                    fill="#0a0a23"
+                    r="95"
+                    stroke="#0a0a23"
+                    stroke-dasharray="null"
+                  ></circle>
+                  <svg
+                    height="200"
+                    viewBox="-13 -12 50 50"
+                    width="200"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </g>
+              </svg>
+              <p>
+                <Code>palindrome("five|\_/|four")</Code> should return
+                <Code>false</Code>.
               </p>
             </li>
           </ul>
@@ -146,16 +527,14 @@
 <script>
 import Navigation from "@/components/utilComponents/Navigation.vue";
 import LeftScreen from "@/components/utilComponents/LeftScreen.vue";
-// import Code from "@/components/utilComponents/Code.vue";
-// import Comment from "@/components/utilComponents/Comment.vue";
+import Code from "@/components/utilComponents/Code.vue";
 import Button from "@/components/utilComponents/Button.vue";
 import RightScreen from "@/components/utilComponents/RightScreen.vue";
 export default {
   components: {
     Navigation,
     LeftScreen,
-    // Code,
-    // Comment,
+    Code,
     Button,
     RightScreen,
   },

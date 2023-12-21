@@ -27,6 +27,27 @@
           <p>Expand course</p>
         </div>
         <span class="result">
+          <span class="result-icon"
+            ><svg
+              aria-hidden="true"
+              height="15"
+              viewBox="0 0 200 200"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <title>Not Passed</title>
+                <circle
+                  cx="100"
+                  cy="99"
+                  fill="#fff"
+                  r="95"
+                  stroke="#0a0a23"
+                  stroke-dasharray="null"
+                  stroke-width="10"
+                ></circle>
+              </g></svg
+          ></span>
           <span id="test-result">
             0 /
             {{
@@ -135,6 +156,11 @@ export default {
   font-size: 1.5rem;
 }
 
+@media (max-width: 620px) {
+  .course .course-header {
+    font-size: 1.2rem;
+  }
+}
 li {
   font-size: 1.17rem;
   line-height: 1.5rem;
@@ -142,6 +168,11 @@ li {
   font-weight: 400;
   padding: 5px 0;
   white-space: pre-line;
+}
+@media (max-width: 620px) {
+  li {
+    font-size: 1rem;
+  }
 }
 .one-px-spacer {
   margin-top: 15px;
@@ -171,7 +202,12 @@ li {
 }
 .result #test-result {
   position: absolute;
-  right: 15px;
+  right: 0;
+  width: 10%;
+}
+.result-icon {
+  position: absolute;
+  right: calc(10% + 10px);
 }
 .course.test {
   width: 100%;

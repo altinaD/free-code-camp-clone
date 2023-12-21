@@ -59,7 +59,8 @@ ol {
   background-color: #d0d0d5;
   position: relative;
 }
-.left:hover {
+.left:hover,
+.right:hover {
   text-decoration: underline;
 }
 .left::after {
