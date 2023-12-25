@@ -16,6 +16,7 @@
         * Your test output will go here <br />
         <br />
         */
+        {{ val }}
       </p>
     </div>
   </div>
@@ -23,17 +24,31 @@
 
 <script>
 import loader from "@monaco-editor/loader";
-// import editor from "monaco-editor";
 import { ref } from "vue";
 export default {
   name: "Editor",
   async mounted() {
+    // loader.init().then((monaco) => {
+    //   const editorOptions = {
+    //     language: "javascript",
+    //     minimap: { enabled: false },
+    //   };
+    //   monaco.editor.create(document.getElementById("editor"), editorOptions);
+    // });
     loader.init().then((monaco) => {
-      const editorOptions = {
+      var editor = monaco.editor.create(document.getElementById("editor"), {
         language: "javascript",
-        minimap: { enabled: false },
-      };
-      monaco.editor.create(document.getElementById("editor"), editorOptions);
+        automaticLayout: true,
+        lineNumbers: "off",
+        roundedSelection: false,
+        scrollBeyondLastLine: false,
+      });
+      setTimeout(function () {
+        editor.updateOptions({
+          lineNumbers: "on",
+        });
+      }, 2000);
+      // this.val = editor.getValue();
     });
   },
   data() {
@@ -43,10 +58,10 @@ export default {
       pageX: 0,
       resizableElement: null,
       content: ref(),
-      //////////////
       resultResizableElement: null,
       pageY: 0,
       height: 0,
+      val: ref(),
     };
   },
   components: {},
