@@ -5,11 +5,7 @@
       <router-link class="left" to="/"
         >JavaScript Algorithms and Data Structures</router-link
       >
-      <router-link
-        class="right"
-        :to="{ path: '/', hash: '#basic-javascript' }"
-        >{{ title }}</router-link
-      >
+      <router-link class="right" to="/">{{ title }}</router-link>
     </ol>
   </nav>
 </template>
@@ -31,7 +27,6 @@ export default {
     let ndx = path.lastIndexOf("/");
     let res = String(path.slice(1, ndx));
     this.path = "/#" + res;
-    console.log(this.path);
     res = res.split("-");
     for (let x = 0; x < res.length; x++) {
       res[x] = res[x].charAt(0).toUpperCase() + res[x].slice(1);
@@ -43,9 +38,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$navHeight: 27px;
 nav {
-  height: $navHeight;
+  height: 27px;
 }
 ol {
   position: relative;
@@ -68,10 +62,10 @@ ol {
   content: "";
   width: 0;
   height: 0;
-  border-top: $navHeight/2 solid transparent;
-  border-bottom: $navHeight/2 solid transparent;
-  border-left: ($navHeight/2 + 1) solid #d0d0d5;
-  right: -$navHeight/2;
+  border-top: calc(27 / 2) solid transparent;
+  border-bottom: calc(27 / 2) solid transparent;
+  border-left: calc(27 / 2 + 1) solid #d0d0d5;
+  right: calc(27 / 2);
   top: 0;
 }
 .right {

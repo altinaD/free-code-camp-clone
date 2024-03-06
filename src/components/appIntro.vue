@@ -53,7 +53,6 @@
 export default {};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 $main-color: #0a0a23;
 $selection-color: rgba(0, 46, 173, 0.3);
@@ -63,7 +62,6 @@ $secondary-bg-color: #f5f6f7;
 h1,
 p {
   font-family: "Lato", sans-serif;
-  // font-family: monospace;
 }
 
 .max-spacer {

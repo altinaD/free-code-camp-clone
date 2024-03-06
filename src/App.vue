@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ overflow: overflow }">
+  <div id="app">
     <Header />
     <section class="main-block">
       <div class="inner-block">
@@ -21,23 +21,7 @@
 import courses from "./components/courses.vue";
 import appIntro from "./components/appIntro.vue";
 import Header from "./components/header/Header.vue";
-// import { useRouter, useRoute } from 'vue-router'
 export default {
-  // setup(){
-  //   beforeRouteEnter(to, from){
-  //     if(to.path == ""){
-  //       this.overflow = true
-  //     }
-  //     else{
-  //       this.overflow = false
-  //     }
-  //   }
-  // },
-  data() {
-    return {
-      // overflow: ref(false),
-    };
-  },
   components: {
     Header,
     appIntro,
@@ -47,15 +31,12 @@ export default {
 </script>
 
 <style lang="scss">
-$main-color: #0a0a23;
-$selection-color: rgba(0, 46, 173, 0.3);
-$secondary-color: #1b1b32;
-$secondary-bg-color: #f5f6f7;
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 p,
 a,
 li,
@@ -77,7 +58,7 @@ svg {
 }
 
 #app {
-  background-color: $secondary-bg-color;
+  background-color: #f5f6f7;
   font-family: "Lato", sans-serif;
 }
 .overflow {
@@ -85,7 +66,7 @@ svg {
   overflow: hidden;
 }
 ::selection {
-  background-color: $selection-color;
+  background-color: rgba(0, 46, 173, 0.3);
 }
 .main-block {
   max-width: 80%;

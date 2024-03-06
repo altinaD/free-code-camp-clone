@@ -1,7 +1,7 @@
 import {
-  createRouter,
-  createWebHashHistory,
-  // createWebHistory,
+    createRouter,
+    createWebHashHistory,
+    // createWebHistory,
 } from "vue-router";
 import Home from "@/views/Home.vue";
 // basic-js
@@ -98,387 +98,386 @@ import diffTwoArrs from "@/views/inter-as/diff-two-arrays.vue";
 
 import palindromeChecker from "@/views/jsdsa/palindrome-checker.vue";
 
-const routes = [
-  {
-    path: "",
-    component: Home,
-  },
-  {
-    path: "/basic-javascript/add-two-numbers-with-javascript",
-    name: "addTwoNums",
-    component: addTwoNums,
-  },
-  {
-    path: "/basic-javascript/assigning-the-value-of-one-variable-to-another",
-    name: "assignVal",
-    component: assignVal,
-  },
-  {
-    path: "/basic-javascript/comment-your-javascript-code",
-    name: "comment",
-    component: comment,
-  },
-  {
-    path: "/basic-javascript/declare-a-read-only-variable-with-the-const-keyword",
-    name: "declareConst",
-    component: declareConst,
-  },
-  {
-    path: "/basic-javascript/divide-one-number-by-another-with-javascript",
-    name: "division",
-    component: division,
-  },
-  {
-    path: "/basic-javascript/declare-javascript-variables",
-    name: "declare",
-    component: declare,
-  },
-  {
-    path: "/basic-javascript/declare-string-variables",
-    name: "declareStr",
-    component: declareStr,
-  },
-  {
-    path: "/basic-javascript/explore-differences-between-the-var-and-let-keywords",
-    name: "differencesVarLet",
-    component: differencesVarLet,
-  },
-  {
-    path: "/basic-javascript/initializing-variables-with-the-assignment-operator",
-    name: "initVarsAssign",
-    component: initVarsAssign,
-  },
-  {
-    path: "/basic-javascript/multiply-two-numbers-with-javascript",
-    name: "multiply",
-    component: multiply,
-  },
-  {
-    path: "/basic-javascript/storing-values-with-the-assignment-operator",
-    name: "storingVals",
-    component: storingVals,
-  },
-  {
-    path: "/basic-javascript/subtract-one-number-from-another-with-javascript",
-    name: "substract",
-    component: substract,
-  },
-  {
-    path: "/basic-javascript/understanding-case-sensitivity-in-variables",
-    name: "caseSens",
-    component: caseSens,
-  },
-  {
-    path: "/basic-javascript/understanding-uninitialized-variables",
-    name: "uninitVars",
-    component: uninitVars,
-  },
+const routes = [{
+        path: "",
+        component: Home,
+    },
+    {
+        path: "/basic-javascript/add-two-numbers-with-javascript",
+        name: "addTwoNums",
+        component: addTwoNums,
+    },
+    {
+        path: "/basic-javascript/assigning-the-value-of-one-variable-to-another",
+        name: "assignVal",
+        component: assignVal,
+    },
+    {
+        path: "/basic-javascript/comment-your-javascript-code",
+        name: "comment",
+        component: comment,
+    },
+    {
+        path: "/basic-javascript/declare-a-read-only-variable-with-the-const-keyword",
+        name: "declareConst",
+        component: declareConst,
+    },
+    {
+        path: "/basic-javascript/divide-one-number-by-another-with-javascript",
+        name: "division",
+        component: division,
+    },
+    {
+        path: "/basic-javascript/declare-javascript-variables",
+        name: "declare",
+        component: declare,
+    },
+    {
+        path: "/basic-javascript/declare-string-variables",
+        name: "declareStr",
+        component: declareStr,
+    },
+    {
+        path: "/basic-javascript/explore-differences-between-the-var-and-let-keywords",
+        name: "differencesVarLet",
+        component: differencesVarLet,
+    },
+    {
+        path: "/basic-javascript/initializing-variables-with-the-assignment-operator",
+        name: "initVarsAssign",
+        component: initVarsAssign,
+    },
+    {
+        path: "/basic-javascript/multiply-two-numbers-with-javascript",
+        name: "multiply",
+        component: multiply,
+    },
+    {
+        path: "/basic-javascript/storing-values-with-the-assignment-operator",
+        name: "storingVals",
+        component: storingVals,
+    },
+    {
+        path: "/basic-javascript/subtract-one-number-from-another-with-javascript",
+        name: "substract",
+        component: substract,
+    },
+    {
+        path: "/basic-javascript/understanding-case-sensitivity-in-variables",
+        name: "caseSens",
+        component: caseSens,
+    },
+    {
+        path: "/basic-javascript/understanding-uninitialized-variables",
+        name: "uninitVars",
+        component: uninitVars,
+    },
 
-  // es6
-  {
-    path: "/es6/compare-scopes-of-the-var-and-let-keywords",
-    name: "compareScopes",
-    component: compareScopes,
-  },
-  {
-    path: "/es6/complete-a-promise-with-resolve-and-reject",
-    name: "completeAPromiseResolveReject",
-    component: completeAPromiseResolveReject,
-  },
-  {
-    path: "/es6/create-a-javascript-promise",
-    name: "createPromise",
-    component: createPromise,
-  },
-  {
-    path: "/es6/create-a-module-script",
-    name: "createModuleScript",
-    component: createModuleScript,
-  },
-  {
-    path: "/es6/create-an-export-fallback-with-export-default",
-    name: "createExportFallback",
-    component: createExportFallback,
-  },
-  {
-    path: "/es6/create-strings-using-template-literals",
-    name: "createStringUsingLiterals",
-    component: createStringUsingLiterals,
-  },
-  {
-    path: "/es6/destructuring-via-rest-elements",
-    name: "destructingRestEl",
-    component: destructingRestEl,
-  },
-  {
-    path: "/es6/handle-a-fulfilled-promise-with-then",
-    name: "handlePromiseWithThen",
-    component: handlePromiseWithThen,
-  },
-  {
-    path: "/es6/handle-a-rejected-promise-with-catch",
-    name: "handleRejectedPromiseWithCatch",
-    component: handleRejectedPromiseWithCatch,
-  },
-  {
-    path: "/es6/import-a-default-export",
-    name: "importDefExport",
-    component: importDefExport,
-  },
-  {
-    path: "/es6/mutate-an-array-declared-with-const",
-    name: "mutateArrConst",
-    component: mutateArrConst,
-  },
-  {
-    path: "/es6/prevent-object-mutation",
-    name: "preventObjMutation",
-    component: preventObjMutation,
-  },
-  {
-    path: "/es6/reuse-javascript-code-using-import",
-    name: "reuseJsCodeImport",
-    component: reuseJsCodeImport,
-  },
-  {
-    path: "/es6/set-default-parameters-for-your-functions",
-    name: "setDefParamsForFunc",
-    component: setDefParamsForFunc,
-  },
-  {
-    path: "/es6/use-arrow-functions-to-write-concise-anonymous-functions",
-    name: "useArrowFuncForAnonFunc",
-    component: useArrowFuncForAnonFunc,
-  },
-  {
-    path: "/es6/use-class-syntax-to-define-a-constructor-function",
-    name: "useClassSyntaxConstrFunc",
-    component: useClassSyntaxConstrFunc,
-  },
-  {
-    path: "/es6/use-destructuring-assignment-to-assign-variables-from-objects",
-    name: "useDesrtAssignVarsFromObj",
-    component: useDesrtAssignVarsFromObj,
-  },
-  {
-    path: "/es6/use-destructuring-assignment-to-assign-variables-from-arrays",
-    name: "useDestrAssignfromArr",
-    component: useDestrAssignfromArr,
-  },
-  {
-    path: `/use-destructuring-assignment-to-pass-an-object-as-a-function's-parameters`,
-    name: "useDestrAssignToPassObj",
-    component: useDestrAssignToPassObj,
-  },
-  {
-    path: "/es6/use-destructuring-assignment-to-assign-variables-from-nested-objects",
-    name: "useDestrAssignfromNestedObj",
-    component: useDestrAssignfromNestedObj,
-  },
-  {
-    path: "/es6/use-destructuring-assignment-to-extract-values-from-objects",
-    name: "useDestrAssignExtrVals",
-    component: useDestrAssignExtrVals,
-  },
-  {
-    path: "/es6/use-export-to-share-a-code-block",
-    name: "useExportToShare",
-    component: useExportToShare,
-  },
-  {
-    path: "/es6/use-getters-and-setters-to-control-access-to-an-object",
-    name: "useGettersAndSetterToContrAccess",
-    component: useGettersAndSetterToContrAccess,
-  },
-  {
-    path: "/es6/use-the-rest-parameter-with-function-parameters",
-    name: "useTheRestParamWithFuncParams",
-    component: useTheRestParamWithFuncParams,
-  },
-  {
-    path: "/es6/use-the-spread-operator-to-evaluate-arrays-in-place",
-    name: "useSpreadOperToEvalArrInPlace",
-    component: useSpreadOperToEvalArrInPlace,
-  },
-  {
-    path: "/es6/use-*-to-import-everything-from-a-file",
-    name: "toImportEverything",
-    component: toImportEverything,
-  },
-  {
-    path: "/es6/write-arrow-functions-with-parameters",
-    name: "writeArrowFunParams",
-    component: writeArrowFunParams,
-  },
-  {
-    path: "/es6/write-concise-declarative-functions-with-es6",
-    name: "writeConciseDecFunc",
-    component: writeConciseDecFunc,
-  },
-  {
-    path: "/es6/write-concise-object-literal-declarations-using-object-property-shorthand",
-    name: "writeConciseObjLiteral",
-    component: writeConciseObjLiteral,
-  },
+    // es6
+    {
+        path: "/es6/compare-scopes-of-the-var-and-let-keywords",
+        name: "compareScopes",
+        component: compareScopes,
+    },
+    {
+        path: "/es6/complete-a-promise-with-resolve-and-reject",
+        name: "completeAPromiseResolveReject",
+        component: completeAPromiseResolveReject,
+    },
+    {
+        path: "/es6/create-a-javascript-promise",
+        name: "createPromise",
+        component: createPromise,
+    },
+    {
+        path: "/es6/create-a-module-script",
+        name: "createModuleScript",
+        component: createModuleScript,
+    },
+    {
+        path: "/es6/create-an-export-fallback-with-export-default",
+        name: "createExportFallback",
+        component: createExportFallback,
+    },
+    {
+        path: "/es6/create-strings-using-template-literals",
+        name: "createStringUsingLiterals",
+        component: createStringUsingLiterals,
+    },
+    {
+        path: "/es6/destructuring-via-rest-elements",
+        name: "destructingRestEl",
+        component: destructingRestEl,
+    },
+    {
+        path: "/es6/handle-a-fulfilled-promise-with-then",
+        name: "handlePromiseWithThen",
+        component: handlePromiseWithThen,
+    },
+    {
+        path: "/es6/handle-a-rejected-promise-with-catch",
+        name: "handleRejectedPromiseWithCatch",
+        component: handleRejectedPromiseWithCatch,
+    },
+    {
+        path: "/es6/import-a-default-export",
+        name: "importDefExport",
+        component: importDefExport,
+    },
+    {
+        path: "/es6/mutate-an-array-declared-with-const",
+        name: "mutateArrConst",
+        component: mutateArrConst,
+    },
+    {
+        path: "/es6/prevent-object-mutation",
+        name: "preventObjMutation",
+        component: preventObjMutation,
+    },
+    {
+        path: "/es6/reuse-javascript-code-using-import",
+        name: "reuseJsCodeImport",
+        component: reuseJsCodeImport,
+    },
+    {
+        path: "/es6/set-default-parameters-for-your-functions",
+        name: "setDefParamsForFunc",
+        component: setDefParamsForFunc,
+    },
+    {
+        path: "/es6/use-arrow-functions-to-write-concise-anonymous-functions",
+        name: "useArrowFuncForAnonFunc",
+        component: useArrowFuncForAnonFunc,
+    },
+    {
+        path: "/es6/use-class-syntax-to-define-a-constructor-function",
+        name: "useClassSyntaxConstrFunc",
+        component: useClassSyntaxConstrFunc,
+    },
+    {
+        path: "/es6/use-destructuring-assignment-to-assign-variables-from-objects",
+        name: "useDesrtAssignVarsFromObj",
+        component: useDesrtAssignVarsFromObj,
+    },
+    {
+        path: "/es6/use-destructuring-assignment-to-assign-variables-from-arrays",
+        name: "useDestrAssignfromArr",
+        component: useDestrAssignfromArr,
+    },
+    {
+        path: `/use-destructuring-assignment-to-pass-an-object-as-a-function's-parameters`,
+        name: "useDestrAssignToPassObj",
+        component: useDestrAssignToPassObj,
+    },
+    {
+        path: "/es6/use-destructuring-assignment-to-assign-variables-from-nested-objects",
+        name: "useDestrAssignfromNestedObj",
+        component: useDestrAssignfromNestedObj,
+    },
+    {
+        path: "/es6/use-destructuring-assignment-to-extract-values-from-objects",
+        name: "useDestrAssignExtrVals",
+        component: useDestrAssignExtrVals,
+    },
+    {
+        path: "/es6/use-export-to-share-a-code-block",
+        name: "useExportToShare",
+        component: useExportToShare,
+    },
+    {
+        path: "/es6/use-getters-and-setters-to-control-access-to-an-object",
+        name: "useGettersAndSetterToContrAccess",
+        component: useGettersAndSetterToContrAccess,
+    },
+    {
+        path: "/es6/use-the-rest-parameter-with-function-parameters",
+        name: "useTheRestParamWithFuncParams",
+        component: useTheRestParamWithFuncParams,
+    },
+    {
+        path: "/es6/use-the-spread-operator-to-evaluate-arrays-in-place",
+        name: "useSpreadOperToEvalArrInPlace",
+        component: useSpreadOperToEvalArrInPlace,
+    },
+    {
+        path: "/es6/use-*-to-import-everything-from-a-file",
+        name: "toImportEverything",
+        component: toImportEverything,
+    },
+    {
+        path: "/es6/write-arrow-functions-with-parameters",
+        name: "writeArrowFunParams",
+        component: writeArrowFunParams,
+    },
+    {
+        path: "/es6/write-concise-declarative-functions-with-es6",
+        name: "writeConciseDecFunc",
+        component: writeConciseDecFunc,
+    },
+    {
+        path: "/es6/write-concise-object-literal-declarations-using-object-property-shorthand",
+        name: "writeConciseObjLiteral",
+        component: writeConciseObjLiteral,
+    },
 
-  // regex
+    // regex
 
-  {
-    path: "/regular-expressions/using-the-test-method",
-    name: "usingTheTestMethod",
-    component: usingTheTestMethod,
-  },
-  {
-    path: "/regular-expressions/match-literal-strings",
-    name: "matchLiteralStrings",
-    component: matchLiteralStrings,
-  },
-  {
-    path: "/regular-expressions/match-a-literal-string-with-different-possibilities",
-    name: "matchALiteralStringWithDifPos",
-    component: matchALiteralStringWithDifPos,
-  },
-  {
-    path: "/regular-expressions/ignore-case-while-matching",
-    name: "ignoreCaseWhileMatch",
-    component: ignoreCaseWhileMatch,
-  },
-  {
-    path: "/regular-expressions/extract-matches",
-    name: "extractMatches",
-    component: extractMatches,
-  },
-  {
-    path: "/regular-expressions/find-more-than-the-first-match",
-    component: findMoreThanTheFirstMAtch,
-    name: "findMoreThanTheFirstMAtch",
-  },
-  {
-    path: "/regular-expressions/match-anything-with-wildcard-period",
-    component: matchAnythingWithWildcard,
-    name: "matchAnythingWithWildcard",
-  },
+    {
+        path: "/regular-expressions/using-the-test-method",
+        name: "usingTheTestMethod",
+        component: usingTheTestMethod,
+    },
+    {
+        path: "/regular-expressions/match-literal-strings",
+        name: "matchLiteralStrings",
+        component: matchLiteralStrings,
+    },
+    {
+        path: "/regular-expressions/match-a-literal-string-with-different-possibilities",
+        name: "matchALiteralStringWithDifPos",
+        component: matchALiteralStringWithDifPos,
+    },
+    {
+        path: "/regular-expressions/ignore-case-while-matching",
+        name: "ignoreCaseWhileMatch",
+        component: ignoreCaseWhileMatch,
+    },
+    {
+        path: "/regular-expressions/extract-matches",
+        name: "extractMatches",
+        component: extractMatches,
+    },
+    {
+        path: "/regular-expressions/find-more-than-the-first-match",
+        component: findMoreThanTheFirstMAtch,
+        name: "findMoreThanTheFirstMAtch",
+    },
+    {
+        path: "/regular-expressions/match-anything-with-wildcard-period",
+        component: matchAnythingWithWildcard,
+        name: "matchAnythingWithWildcard",
+    },
 
-  // debugging
+    // debugging
 
-  {
-    path: "/debugging/use-the-javascript-console-to-check-the-value-of-a-variable",
-    component: useJsConsoleToCheckVal,
-    name: "useJsConsoleToCheckVal",
-  },
-  {
-    path: "/debugging/understanding-the-differences-between-the-freecodecamp-and-browser-console",
-    component: understandDiffBtwFreeCodeAndBrowserConsole,
-    name: "understandDiffBtwFreeCodeAndBrowserConsole",
-  },
-  {
-    path: "/debugging/use-typeof-to-check-the-type-of-a-variable",
-    component: useTypeofToCheckTypeVar,
-    name: "useTypeofToCheckTypeVar",
-  },
-  {
-    path: "/debugging/catch-misspelled-variable-and-function-names",
-    component: catchMisspelledVarAndFuncName,
-    name: "catchMisspelledVarAndFuncName",
-  },
+    {
+        path: "/debugging/use-the-javascript-console-to-check-the-value-of-a-variable",
+        component: useJsConsoleToCheckVal,
+        name: "useJsConsoleToCheckVal",
+    },
+    {
+        path: "/debugging/understanding-the-differences-between-the-freecodecamp-and-browser-console",
+        component: understandDiffBtwFreeCodeAndBrowserConsole,
+        name: "understandDiffBtwFreeCodeAndBrowserConsole",
+    },
+    {
+        path: "/debugging/use-typeof-to-check-the-type-of-a-variable",
+        component: useTypeofToCheckTypeVar,
+        name: "useTypeofToCheckTypeVar",
+    },
+    {
+        path: "/debugging/catch-misspelled-variable-and-function-names",
+        component: catchMisspelledVarAndFuncName,
+        name: "catchMisspelledVarAndFuncName",
+    },
 
-  // basic-data-structures
+    // basic-data-structures
 
-  {
-    path: "/basic-data-structures/use-an-array-to-store-a-collection-of-data",
-    component: useAnArrToStoreCollectOfData,
-    name: "useAnArrToStoreCollectOfData",
-  },
-  {
-    path: "/basic-data-structures/access-an-array's-contents-using-bracket-notation",
-    component: accessAnArrContentUsingBracketNot,
-    name: "accessAnArrContentUsingBracketNot",
-  },
-  {
-    path: "/basic-data-structures/add-items-to-an-array-with-push()-and-unshift()",
-    component: addItemToAnArrPushAndUnshift,
-    name: "addItemToAnArrPushAndUnshift",
-  },
+    {
+        path: "/basic-data-structures/use-an-array-to-store-a-collection-of-data",
+        component: useAnArrToStoreCollectOfData,
+        name: "useAnArrToStoreCollectOfData",
+    },
+    {
+        path: "/basic-data-structures/access-an-array's-contents-using-bracket-notation",
+        component: accessAnArrContentUsingBracketNot,
+        name: "accessAnArrContentUsingBracketNot",
+    },
+    {
+        path: "/basic-data-structures/add-items-to-an-array-with-push()-and-unshift()",
+        component: addItemToAnArrPushAndUnshift,
+        name: "addItemToAnArrPushAndUnshift",
+    },
 
-  //   basic as
+    //   basic as
 
-  {
-    path: "/basic-algorithm-scripting/convert-celsius-to-fahrenheit",
-    component: convertCelsiusToFahr,
-    name: "convertCelsiusToFahr",
-  },
-  {
-    path: "/basic-algorithm-scripting/reverse-a-string",
-    component: reverseAStr,
-    name: "reverseAStr",
-  },
-  {
-    path: "/basic-algorithm-scripting/factorialize-a-number",
-    component: factorANum,
-    name: "factorANum",
-  },
+    {
+        path: "/basic-algorithm-scripting/convert-celsius-to-fahrenheit",
+        component: convertCelsiusToFahr,
+        name: "convertCelsiusToFahr",
+    },
+    {
+        path: "/basic-algorithm-scripting/reverse-a-string",
+        component: reverseAStr,
+        name: "reverseAStr",
+    },
+    {
+        path: "/basic-algorithm-scripting/factorialize-a-number",
+        component: factorANum,
+        name: "factorANum",
+    },
 
-  //   oop
-  {
-    path: "/object-oriented-programming/create-a-basic-javascript-object",
-    component: createABasicObj,
-    name: "createABasicObj",
-  },
-  {
-    path: "/object-oriented-programming/use-dot-notation-to-access-the-properties-of-an-object",
-    component: useDotNotatToAccessPropOfObj,
-    name: "useDotNotatToAccessPropOfObj",
-  },
+    //   oop
+    {
+        path: "/object-oriented-programming/create-a-basic-javascript-object",
+        component: createABasicObj,
+        name: "createABasicObj",
+    },
+    {
+        path: "/object-oriented-programming/use-dot-notation-to-access-the-properties-of-an-object",
+        component: useDotNotatToAccessPropOfObj,
+        name: "useDotNotatToAccessPropOfObj",
+    },
 
-  //   func program
+    //   func program
 
-  {
-    path: "/functional-programming/learn-about-functional-programming",
-    component: learnAboutFuncProgram,
-    name: "learnAboutFuncProgram",
-  },
-  {
-    path: "/functional-programming/understand-functional-programming-terminology",
-    component: undersFuncProgTermin,
-    name: "undersFuncProgTermin",
-  },
+    {
+        path: "/functional-programming/learn-about-functional-programming",
+        component: learnAboutFuncProgram,
+        name: "learnAboutFuncProgram",
+    },
+    {
+        path: "/functional-programming/understand-functional-programming-terminology",
+        component: undersFuncProgTermin,
+        name: "undersFuncProgTermin",
+    },
 
-  //   intermed algorithm scripting
-  {
-    path: "/intermediate-algorithm-scripting/sum-all-numbers-in-a-range",
-    component: sumAllNumsInARange,
-    name: "sumAllNumsInARange",
-  },
-  {
-    path: "/intermediate-algorithm-scripting/diff-two-arrays",
-    component: diffTwoArrs,
-    name: "diffTwoArrs",
-  },
+    //   intermed algorithm scripting
+    {
+        path: "/intermediate-algorithm-scripting/sum-all-numbers-in-a-range",
+        component: sumAllNumsInARange,
+        name: "sumAllNumsInARange",
+    },
+    {
+        path: "/intermediate-algorithm-scripting/diff-two-arrays",
+        component: diffTwoArrs,
+        name: "diffTwoArrs",
+    },
 
-  // js algorithms and data structures projects
-  {
-    path: "/javascript-algorithms-and-data-structures-projects/palindrome-checker",
-    component: palindromeChecker,
-    name: "palindromeChecker",
-  },
+    // js algorithms and data structures projects
+    {
+        path: "/javascript-algorithms-and-data-structures-projects/palindrome-checker",
+        component: palindromeChecker,
+        name: "palindromeChecker",
+    },
 ];
 
 const router = createRouter({
-  // history: createWebHistory(process.env.BASE_URL),
-  history: createWebHashHistory(),
-  routes,
-  scrollBehavior(to, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    }
-    if (to.hash) {
-      return {
-        selector: to.hash,
-        behavior: "smooth",
-      };
-    }
-    return { x: 0, y: 0 };
-  },
+    // history: createWebHistory(process.env.BASE_URL),
+    history: createWebHashHistory(),
+    routes,
+    scrollBehavior(to, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        }
+        if (to.hash) {
+            return {
+                selector: to.hash,
+                behavior: "smooth",
+            };
+        }
+        return { x: 0, y: 0 };
+    },
 });
 
 export default router;
