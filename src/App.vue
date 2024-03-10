@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <main-header />
     <section class="main-block">
       <div class="inner-block">
         <app-intro />
@@ -14,20 +14,15 @@
     <section class="components">
       <router-view></router-view>
     </section>
+    <main-footer />
   </div>
 </template>
 
-<script>
+<script setup>
 import courses from "./components/courses.vue";
-import appIntro from "./components/appIntro.vue";
-import Header from "./components/header/Header.vue";
-export default {
-  components: {
-    Header,
-    appIntro,
-    courses,
-  },
-};
+import appIntro from "./components/app-intro.vue";
+import mainHeader from "./components/header/main-header.vue";
+import mainFooter from "./components/footer/footer.vue";
 </script>
 
 <style lang="scss">
