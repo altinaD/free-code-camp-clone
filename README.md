@@ -7,4 +7,4 @@ Note: not all components are imported, just for demo purposes some of them are u
 
 Issues: 1. Each component of courses has a scroll bar, which I was not able to remove. 2. the user code in each component cannot be validated. 3. need code automation inside views folder.
 
-P.S. I know that this is not the best solution for this project, nevertheless I believe that if there is a person who can guide me I am definitely going to write code better. FIY I am open to learning new things, and so excited to be part of the development world. Looking forward for your response)
+PS I know that this is not the best solution for this project, nevertheless I believe that if there is a person who can guide me I am definitely going to write code better. FYI I am open to learning new things, and so excited to be part of the development world. Looking forward for your response)
